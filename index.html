@@ -3,57 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keylogger</title>
-    <style>
-        .container{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 50px;
-        }
-        #log,#state{
-            width: 500px;
-            height: 50px;
-            border: 1px solid black;
-            padding:10px;
-            margin-top: 20px;
-            font-size: 20px;
-            text-align: center;
-            background-color: #ffa500;
-            border-radius: 10px;
-        }
-        .button-container{
-            display: flex;
-            flex-direction: row;
-        }
-        button{
-            padding: 10px 20px;
-            font-size: 20px;
-            margin-top: 20px;
-            margin-right: 20px;
-        }
-        .container h1{
-            border: 2px solid black;
-            border-radius: 10px;
-        }
-    </style>
+    <title>Form validation</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Key Logger</h1>
-        <p>Dont forget to subscribe</p>
+        <form class="form" id="form">
+            <h1>Registration Form</h1>
+            <div class="form-control">
+                <label>Username:</label>
+                <input type="text" id="username" name="name">
+                <span class="error"></span>
+            </div>
 
-        <div class="button-container">
-            <button id="start-btn">Start logging keypresses</button>
-            <button id="stop-btn">stop logging keypresses</button>
-        </div>
-        <div class="button-container">
-            <div id="log"></div>
-            <div id="state"></div>
-        </div>
+            <div class="form-control">
+                <label>Email:</label>
+                <input type="email" id="email" name="name" required>
+                <span class="error"></span>
+            </div>
+
+            <div class="form-control">
+                <label>Password:</label>
+                <input type="password" id="password" name="name" required>
+                <span class="error"></span>
+            </div>
+
+            <div class="form-control">
+                <label>Confirm Password:</label>
+                <input type="password" id="confirm-password" name="name" required>
+                <span class="error"></span>
+            </div>
+
+            <input type="submit" id="btn" value="submit" name="submit" />
+        </form>    
     </div>
-    <script src="index.js">
-        
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
